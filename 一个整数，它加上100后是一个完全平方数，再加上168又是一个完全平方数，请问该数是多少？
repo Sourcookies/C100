@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+	 int i,a,b,m=10000;
+	 for (i = -100; i <= m; i++) 
+	 {
+		 a = sqrt(i + 100);
+		 b = sqrt(i + 100 + 168);
+		 if ((a * a) == (i + 100) && (b * b) == (i + 268))
+		 {
+			 printf("%d\n", i);
+		 }
+	 }
+		return 0;
+	}
