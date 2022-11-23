@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+	int cnt,cnt1=1,cnt2 = 1;
+	printf("第一个月：%d\n",cnt1);
+	printf("第二个月：%d\n",cnt2);
+	for (int i = 3; i < 41; i++)
+	{
+		cnt = cnt1 + cnt2;
+		printf("第%d个月：%d\n",i,cnt);
+		cnt1 = cnt2;
+		cnt2 = cnt;
+	}
+	      return 0;
+	}
