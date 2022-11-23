@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+	for (int i = 100; i <1000; i++)
+	{
+		int units, tens, huns;
+		huns = i / 100;
+		tens = i % 100 / 10;
+		units = i % 10;
+		if (i==huns*huns*huns+tens*tens*tens+units*units*units)
+		{    
+			printf("%d\n", i);
+		}
+	}
+	      return 0;
+	}
