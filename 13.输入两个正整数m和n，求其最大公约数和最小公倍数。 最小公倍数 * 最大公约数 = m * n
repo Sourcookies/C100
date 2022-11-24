@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+	int m,n,t,max,i;
+	scanf_s("%d %d",&m,&n);
+	max = m * n;
+	while (n != 0)
+	{
+		t = m % n;
+		m= n;
+		n = t;
+	}
+	i = max / m;
+	printf("%d %d",m,i);
+	      return 0;
+	}
+  //循环后的m是最大公约数
