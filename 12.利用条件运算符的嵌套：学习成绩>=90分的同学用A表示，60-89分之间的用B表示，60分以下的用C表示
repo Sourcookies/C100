@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+	int score;
+	char rank;
+	scanf_s("%d",&score);
+	rank = (score >= 90) ? 'A' : ((score >= 60) ? 'B' : 'C');
+	printf("%c",rank);
+				
+	
+	      return 0;
+	}
