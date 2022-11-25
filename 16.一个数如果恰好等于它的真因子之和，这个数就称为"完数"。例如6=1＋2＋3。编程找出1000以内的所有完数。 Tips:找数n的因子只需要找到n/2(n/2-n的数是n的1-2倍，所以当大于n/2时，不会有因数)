@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main() {
+	int a[1000];
+	for (int i = 1; i < 1000; i++)      //i是要判断的数，j是因子，sum是因子之和
+	{
+		int sum = 0, k = 0;
+		for (int j = 1; j <= i / 2; j++)
+		{
+			if (i % j == 0)                //判断i能否被j整除，能的话j为因子
+			{
+				sum += j;
+				a[k++] = j;
+			}
+		}
+		if (i == sum)                    //判断此数是否等于因子之和
+		{
+			printf("%d = %d", i, a[0]);
+			for (int m = 1; m < k; m++)
+			{
+				printf(" + %d", a[m]);
+			}
+			printf("\n");
+		}
+	}
+	      return 0;
+	}
