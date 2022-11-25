@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main() {
+	char c;
+	int lettercnt = 0, spacecnt = 0, numcnt = 0, othercnt = 0;
+	while ((c = getchar()) != '\n')
+	{
+		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		{
+			lettercnt++;
+		}
+		else if (c == ' ')
+		{
+			spacecnt++;
+		}
+		else if (c >= '0' && c <= '9')
+		{
+			numcnt++;
+		}
+		else
+		{
+			othercnt++;
+		}
+	}
+	printf("英文字母个数为%d\n", lettercnt);
+	printf("空格个数为%d\n", spacecnt);
+	printf("数字个数为%d\n", numcnt);
+	printf("其它字符个数为%d\n", othercnt);
+	      return 0;
+	}
