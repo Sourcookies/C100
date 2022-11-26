@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+	float height = 100;
+	float sum = height;                
+		for (int i = 0; i <9; i++)      //共落地了10次，i则是遍历了9次，画图，落地第1次即i=0时，走过的路程是第二次未出发时
+		{                               //开始---1---2，横线为曲线，也是i=0时的路程，所以只要遍历9次，第九次是包括第十次的路程
+			height /= 2;
+			sum += 2 * height;
+		}
+		height /= 2;
+	    printf("共经过%f米\n",sum);
+		printf("第10次反弹%f米\n",height);
+	      return 0;
+	}
