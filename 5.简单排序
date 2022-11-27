@@ -1,3 +1,4 @@
+输入三个整数x,y,z，把这三个数由小到大输出
 #include <stdio.h>
 int main() {
 	int a, b, c,t;
