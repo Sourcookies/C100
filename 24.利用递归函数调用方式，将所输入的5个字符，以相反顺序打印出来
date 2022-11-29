@@ -1,0 +1,24 @@
+getchar()本身没有所谓的倒序执行这种说法,
+而是因为多个getchar作为printf函数的参数传递,而函数参数是以栈形式存储的,
+所以才出现最后的getchar()被最先执行,最右边的getchar()被打印在最后。
+#include <stdio.h>
+void f(int n)
+{         
+	if (n>1)
+	{
+		char c = getchar();
+		f(n - 1);
+		putchar(c);
+	}
+	else
+	{
+		char c = getchar();
+		putchar(c);
+	}
+	
+}
+int main() {
+	          
+	f(5);
+	  return 0;
+	}
