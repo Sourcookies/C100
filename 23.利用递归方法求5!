@@ -1,0 +1,19 @@
+#include <stdio.h>
+int f(int num)
+{         
+	int sum;
+	if (num == 1)
+	{
+		sum = 1;
+	}
+	else
+	{
+		sum = num * f(num-1);           //用函数做循环
+	}
+	return sum;
+}
+int main() {
+	        int num = 5;
+			printf("%d",f(num));
+	  return 0;
+	}
