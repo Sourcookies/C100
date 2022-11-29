@@ -20,3 +20,13 @@ int main() {
 			printf("%d",f(num));
 	  return 0;
 	}
+求 5!，即调用 factorial(5)。当进入 factorial() 函数体后，由于形参 n 的值为 5，不等于 0 或 1，所以执行factorial(n-1) * n，也即执行factorial(4) * 5。
+为了求得这个表达式的结果，必须先调用 factorial(4)，并暂停其他操作。
+换句话说，在得到 factorial(4) 的结果之前，不能进行其他操作。这就是第一次递归
+以此类推，进行四次递归调用后，实参的值为 1，会调用 factorial(1)。
+此时能够直接得到常量 1 的值，并把结果 return，就不需要再次调用 factorial() 函数了，递归就结束了
+当递归进入到最内层的时候，递归就结束了，就开始逐层退出了，也就是逐层执行 return 语句。
+
+1) n 的值为 1 时达到最内层，此时 return 出去的结果为 1，也即 factorial(1) 的调用结果为 1。
+
+2) 有了 factorial(1) 的结果，就可以返回上一层计算factorial(1) * 2的值了。此时得到的值为 2，return 出去的结果也为 2，也即 factorial(2) 的调用结果为 2
