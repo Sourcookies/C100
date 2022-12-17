@@ -28,8 +28,8 @@ int main() {
 	for (int i = 101; i <= 200; i++)
 	{ 
 		int j;
-		for ( j = 2; j <=sqrt(i); j++)
-		{
+		for ( j = 2; j <=sqrt(i); j++)   //3是漏洞，因为j>根号3，无法进入循环
+		{                                //这时用方法1
 			if (i % j == 0)
 			{
 				break;
