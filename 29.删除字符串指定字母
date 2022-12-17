@@ -1,0 +1,27 @@
+删除一个字符串中的指定字母，如：字符串 "aca"，删除其中的 a 字母
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	char s1[100],s2[100];
+	int i = 0, j = 0;
+	scanf_s("%s",s1,6);
+	printf("删除字母：");
+	char c;
+	getchar();
+	scanf_s("%c",&c,1);
+	for ( i = 0;i<strlen(s1) ; i++)
+	{
+		if (s1[i]!= c)
+		{
+				s2[j++] = s1[i];
+			}
+	}
+	s2[j] = '\0';
+	printf("%s", s2);
+	return 0;
+}
+//字符串输入：scanf_s("%s",s1,6);
+里的参数：6大于输入值
+因为系统会在结尾填\0
+不这么做会导致结果为null
